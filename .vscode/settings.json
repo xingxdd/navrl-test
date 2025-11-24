@@ -1,0 +1,11 @@
+{
+    "cmake.sourceDirectory": "/home/amax/data/wjh/NavRL_workspace/src/ros1/map_manager",
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "core": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
+    }
+}

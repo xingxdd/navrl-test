@@ -1,0 +1,2 @@
+ros1/map_manager:ros1/navigation_runner:ros1/onboard_detector:ros1/uav_simulator
+-DCATKIN_DEVEL_PREFIX=/home/amax/data/wjh/NavRL_workspace/devel -DCMAKE_INSTALL_PREFIX=/home/amax/data/wjh/NavRL_workspace/install -G Unix Makefiles

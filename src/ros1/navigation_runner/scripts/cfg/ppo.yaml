@@ -1,0 +1,18 @@
+algo:
+  feature_extractor:
+    learning_rate: 5e-4 # 学习率（特征提取器），控制特征提取器参数更新步长
+    dyn_obs_num: 5 # 动态观测数量，表示考虑的动态目标或障碍物的个数
+  
+  actor:
+    learning_rate: 5e-4 # 学习率（策略网络），控制策略网络参数更新步长
+    clip_ratio: 0.1 # 裁剪比率（PPO 的 clip 参数），用于限制策略更新幅度，常用于稳定训练
+    action_limit: 1.0 # m/s # 动作限制（最大线速度），单位：米/秒
+  
+  critic:
+    learning_rate: 5e-4 # 学习率（价值网络/评论家），控制价值网络参数更新步长
+    clip_ratio: 0.1 # 裁剪比率（用于价值网络的裁剪，若使用则可防止过大更新）
+  
+  entropy_loss_coefficient: 1e-3 # 熵损失系数，用于鼓励策略探索（数值越大鼓励越多随机性）
+  training_frame_num: 32 # 每次用于训练的帧数/时间步数量（batch 大小相关）
+  training_epoch_num: 4 # 每次数据采集后在相同数据上重复训练的轮数（epoch 数）
+  num_minibatches: 16 # split into N minibatches # 将数据分成的小批次数，用于小批量优化
